@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Vezbe 9 - Bootstrap </title>
+
+    <!-- ove 4 linije koda moramo kopirati sa w3schools (B4 ili B5) kako bi uopste funkcionisao Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- jumbotron - Bootstrapova klasa za stilizovan blok -->
+    <!-- margin-bottom: 0 - znaci nemamo nista ispod ovog elementa -->
+    <div class="jumbotron text-center" style="background-color: rgb(227, 216, 216); margin-bottom: 0;">
+        <h1>Moja prva bootstrap stranica</h1>
+        <p>Test</p>
+    </div>
+    <!-- sa nav definisemo navigacionu traku u bootstrapu -->
+    <!-- navbar - oznacavamo da je element deo bootstrapove navigacione trake 
+    navbar-dark - ukoliko ne bismo imali ovaj deo tekst ne bi bio vidljiv dok ne prislonimo mis na njega
+    navbar-expand-sm - definisemo kako ce se ponasati navigaciona traka na manjim ekranima, sm-small 
+    xs, md, lg, xl-->
+    <nav class="navbar bg-primary navbar-dark navbar-expand-sm">
+        <!-- navbar-brand - stilizacija linka unutar Bootstrapa -->
+        <a class="navbar-brand" href="#">Navigacija</a>
+
+        <!-- navbar-toggle - ovu klasu koristimo za stilizaciju dugmeta
+        type="button" - mozemo pisati i ne moramo, moze se desiti ukoliko nije napisan da nesto ne radi dobro, preporuka je da se pise
+        data-toggle="collapse" - collapse znaci da je tekst skriven (u slucaju kada su ekrani manji, bice dugme na ekranu koje kada pritisnemo prikazuje sadrzaj)
+        data-target="#Test" - pokazuje sa kojim elementom cemo povezati, voditi racuna taj element mora imati (u ovom slucaju) id Test -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Test">
+            <!-- navbar-toggler-icon - za ikonicu dugmeta -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="Test">
+            <!-- neuredjena lista koja predstavlja kontejner za niz navigacionih linkova - ul -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./Slike centriranje.html">Slike-centriranje</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Profili.html">Profili</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Galerija-vrteska.html">Galerija-vrteska</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ovaj div povezujemo preko id=Test sa gornjim dugmetom -->
+    <!-- navbar-collapse - sadrzaj za navigacione trake -->
+   
+
+    <div class="container" style="border: solid black 3px;">
+        <!-- row - red koji ce kontrolisati kolone (col) -->
+        <div class="row" style="border: solid red 2px;">
+            <!-- col-md-4 - col se odnosi na kolonu, md-medium, 4 na sirinu 4 -->
+            <div class="col-md-4 text-center" style="border: solid green 1px; height:100px">
+                <p>Red 1 kolona 1</p>
+            </div>
+            <!-- align-self-end - ovaj div element ce biti pomeren na dole, da kazemo prilepljen za dno te celije -->
+            <div class="col-md-4 text-center align-self-end" style="border: solid green 1px; height:50px">
+                <p>Red 1 kolona 2</p>
+            </div>
+
+            <div class="col-md-4 text-center" style="border: solid green 1px">
+                <p>Red 1 kolona 3</p>
+            </div>
+        </div>
+        <!-- d-flex - fleksibilni elementi
+        justify-content-around - korisimo za horizontalno pozicioniranje elemenata unutar tog div elementa, prostor izmedju elemenata ce biti podjednako rasporedjen, sa obe strane stvara jednako rastojanje
+        u prethodnom smo imali da su sirine 4, znaci da ce ovde sa leve i desne strane da ih "uvuce" po sirini za 1(ukupno 2) -->
+        <div class="row d-flex justify-content-around" style="border: solid red 2px;">
+            <!-- kod ovih div elemenata za kolone smo stavljali sirinu 2 -->
+            <div class="col-md-2 text-center" style="border: solid green 1px; height:100px">
+                <p>Red 2 kolona 1</p>
+            </div>
+            <!-- align-self-end - ovo smo dodali -->
+            <div class="col-md-2 text-center align-self-end" style="border: solid green 1px; height:50px">
+                <p>Red 2 kolona 2</p>
+            </div>
+
+            <div class="col-md-2 text-center" style="border: solid green 1px">
+                <p>Red 2 kolona 3</p>
+            </div>
+        </div>
+
+        <!-- justify-content-between - umesto around stavili between -->
+        <div class="row d-flex justify-content-between" style="border: solid red 2px;">
+
+            <!-- d-flex - dodali  -->
+            <!-- <div class="col-md-2 text-center d-flex" style="border: solid green 1px; height:100px">
+                <p>Red 3 kolona 1</p>
+            </div> -->
+ 
+            <div class="col-md-2 text-center align-self-end" style="border: solid green 1px; height:50px">
+                <p>Red 3 kolona 2</p>
+            </div>
+
+            <!-- align-self-end - dodali -->
+            <div class="col-md-2 text-center align-self-end" style="border: solid green 1px">
+                <p>Red 3 kolona 3</p>
+            </div>
+
+            <div class="col-md-2 text-center " style="border: solid green 1px; height:50px">
+                <p>Red 3 kolona 2</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron text-center" style="background-color: rgb(227, 216, 216); bottom: 0; position: fixed; width: 100%; margin-bottom: 0px;">
+        <h4>Podnozje</h4>
+    </div>
+</body>
+</html>

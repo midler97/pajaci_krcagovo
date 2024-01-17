@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stranica 2</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50"><!--Skrol bar-->
+
+    <nav class="navbar bg-primary navbar-dark navbar-expand-sm">
+        <!-- navbar-brand - stilizacija linka unutar Bootstrapa -->
+        <a class="navbar-brand" href="./Pocetna.html">Pocetna</a>
+
+        <!-- navbar-toggle - ovu klasu koristimo za stilizaciju dugmeta
+        type="button" - mozemo pisati i ne moramo, moze se desiti ukoliko nije napisan da nesto ne radi dobro, preporuka je da se pise
+        data-toggle="collapse" - collapse znaci da je tekst skriven (u slucaju kada su ekrani manji, bice dugme na ekranu koje kada pritisnemo prikazuje sadrzaj)
+        data-target="#Test" - pokazuje sa kojim elementom cemo povezati, voditi racuna taj element mora imati (u ovom slucaju) id Test -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Test">
+            <!-- navbar-toggler-icon - za ikonicu dugmeta -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="Test">
+            <!-- neuredjena lista koja predstavlja kontejner za niz navigacionih linkova - ul -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./Slike centriranje.html">
+                        <button type="button" class="btn btn-primary btn-lg active">Slike-centriranje</button>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Linkovi.html">
+                        <button type="button" class="btn btn-outline-warning">Linkovi</button>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Galerija-vrteska.html">
+                        <button type="button" class="btn btn-success btn-sm" disabled>Link 2</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Slike-->
+    <div>
+        <br>
+        <div class=" d-flex justify-content-around">
+            <img src="./gallery/slika1.jpg" class="rounded" alt="Slika1" width="100px" height="100px">
+            <img src="./gallery/slika2.jpg" class="rounded-circle" alt="Slika2" width="100px" height="100px">
+            <img src="./gallery/slika3.jpg" class="img-thumbnail" alt="Slika3" width="100px" height="100px">
+        </div>
+
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;Industrial advancements were made possible with all the ground-breaking
+            innovations in automation, robotics, and mechanical engineering. Engineering animations are now bringing
+            advanced tech to the world in the most engaging way. Engineering animations are graphical
+            representations of mechanical systems and processes that are used to illustrate how they function. These
+            animations can be used in a variety of contexts, such as in educational materials, engineering
+            simulations, and marketing materials. There’s so much more in the area; read about the 8 things you need
+            to know about engineering animation.
+        </p>
+        <br>
+        <img src="./gallery/slika2.jpg" class="float-left" alt="Slika2" width="150px">
+        <br>
+        <p>
+            Engineering animation is the use of 3D computer animation to visually represent engineering concepts,
+            designs, and systems. It involves creating animated visualizations of complex engineering processes and
+            systems, often using computer-aided design (CAD) software to build detailed 3D models of engineering
+            components and systems. Engineering animation can be used to simulate and showcase the functionality of
+            an engineering design and can be used to identify design issues and potential problems early on in the
+            design process. It is often used in industries such as aerospace, automotive, construction, and
+            manufacturing to create training and marketing materials and demonstrate a design’s performance before
+            it is built.
+        </p>
+        <br>
+        <img src="./gallery/slika1.jpg" class="mx-auto d-block" alt="Slika1" width="150px">
+        <br>
+        <p>
+            Engineering animations offer a range of benefits for engineers, designers, stakeholders, and end-users.
+            They can help improve understanding, communication, and efficiency and ultimately lead to more effective
+            and successful mechanical systems. It can be leveraged as a marketing tool to feature your best features
+            to attract potential customers. Additionally, these animations are proven to be the best way of
+            identifying potential problems and design flaws early in the development process, which can save time
+            and money in the long run by preventing costly redesigns and rework. They can also be used to simulate
+            and test different design concepts quickly and cost-effectively.
+        </p>
+        <br>
+        <p>
+            Engineering animations offer a range of benefits for engineers, designers, stakeholders, and end-users.
+            They can help improve understanding, communication, and efficiency and ultimately lead to more effective
+            and successful mechanical systems. It can be leveraged as a marketing tool to feature your best features
+            to attract potential customers. Additionally, these animations are proven to be the best way of
+            identifying potential problems and design flaws early in the development process, which can save time
+            and money in the long run by preventing costly redesigns and rework. They can also be used to simulate
+            and test different design concepts quickly and cost-effectively.
+        </p>
+        <br>
+        <br>
+
+        <!--mx-auto (margin:auto), d-block (display:block)-->
+
+        <img src="./gallery/slika3.jpg" class="float-right" alt="Slika3" width="150px">
+        <p>
+            Engineering animations offer a range of benefits for engineers, designers, stakeholders, and end-users.
+            They can help improve understanding, communication, and efficiency and ultimately lead to more effective
+            and successful mechanical systems. It can be leveraged as a marketing tool to feature your best features
+            to attract potential customers. Additionally, these animations are proven to be the best way of
+            identifying potential problems and design flaws early in the development process, which can save time
+            and money in the long run by preventing costly redesigns and rework. They can also be used to simulate
+            and test different design concepts quickly and cost-effectively.
+        </p>
+        <br>
+    </div>
+
+
+</body>
+
+</html>
